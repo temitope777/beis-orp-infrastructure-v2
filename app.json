@@ -1,0 +1,111 @@
+[
+  {
+    "name": "${container_name}",
+    "image": "${docker_image_url}:latest",
+    "family": "beis-orp",
+    "essential": true,
+    "cpu": 128,
+    "memory": 256,
+    "links": [],
+    "portMappings": [
+      {
+        "containerPort": 3000,
+        "protocol": "tcp"
+      }
+    ],
+    "environment": [
+      {
+        "name": "ENVIRONMENT",
+        "value": "${environment}"
+      },
+      {
+        "name": "DOMAIN",
+        "value": "${domain}"
+      },
+      {
+        "name": "S3_UPLOAD_BUCKET",
+        "value": "${s3_upload_bucket}"
+      },
+      {
+        "name": "S3_ORPML_BUCKET",
+        "value": "${s3_orpml_bucket}"
+      },
+      {
+        "name": "AWS_REGION",
+        "value": "${region}"
+      },
+      {
+        "name": "MC_SERVER",
+        "value": "${mc_server}"
+      },
+      {
+        "name": "MC_LIST",
+        "value": "${mc_list}"
+      },
+      {
+        "name": "MC_API_KEY",
+        "value": "${mc_api_key}"
+      },
+      {
+        "name": "CLOUDWATCH_GROUP_NAME",
+        "value": "${cloudwatch_group_name}"
+      },
+      {
+        "name": "CLOUDWATCH_STREAM_NAME",
+        "value": "${cloudwatch_stream_name}"
+      },
+      {
+        "name": "ORP_SEARCH_URL",
+        "value": "${orp_search_url}"
+      },
+      {
+        "name": "COGNITO_USER_POOL",
+        "value": "${cognito_user_pool}"
+      },
+      {
+        "name": "COGNITO_CLIENT_ID",
+        "value": "${cognito_client_id}"
+      },
+      {
+        "name": "COGNITO_API_USER_POOL",
+        "value": "${cognito_api_user_pool}"
+      },
+      {
+        "name": "COGNITO_API_CLIENT_ID",
+        "value": "${cognito_api_client_id}"
+      },
+      {
+        "name": "HTML_INGESTION_URL",
+        "value": "${html_ingestion_url}"
+      },
+      {
+        "name": "DELETE_DOCUMENT_URL",
+        "value": "${delete_document_url}"
+      },
+      {
+        "name": "REDIS_ADDRESS",
+        "value": "${redis_address}"
+      },
+      {
+        "name": "REDIS_PORT",
+        "value": "${redis_port}"
+      },
+      {
+        "name": "SESSION_SECRET",
+        "value": "${session_secret}"
+      },
+      {
+        "name": "REGULATOR_ACCESS",
+        "value": "${regulator_access}"
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "${aws_log_group}",
+        "awslogs-region": "${region}",
+        "awslogs-stream-prefix": "${stream_prefix}"
+      }
+    }
+  }
+]

@@ -1,0 +1,10 @@
+.idea
+*.iml
+.vscode
+.terraform
+.terraform.lock.hcl
+terraform.tfstate*
+terraform.tfvars
+.DS_Store
+*.pyi
+__init__.py
