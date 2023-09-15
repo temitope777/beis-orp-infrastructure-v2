@@ -1,0 +1,32 @@
+name: Build and Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Environment to deploy to
+        required: true
+        type: choice
+        default: development_aks
+        options:
+        - development_aks
+        - staging_aks
+        - production_aks
+        - review_aks
+
+permissions:
+  contents: write
+  deployments: write
+  issues: write
+  packages: write
+  pull-requests: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+    steps:
+      - name: Set DOCKER_IMAGE environment variable
+        id:   just run
+        run: |
+              echo "We are here..."
