@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "beis-orp-datalake" {
-  bucket = "beis-${local.environment}-datalake"
+  bucket = "beis-preprod-datalake"
 }
 
 resource "aws_s3_bucket_acl" "beis-orp-datalake" {

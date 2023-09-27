@@ -3,7 +3,8 @@ locals {
   downloaded  = "downloaded_package_${md5(local.package_url)}.zip"
   environment = var.environment
   region      = "eu-west-2"
-
+  backendkey  = var.backendkey
+  bucketname  = var.bucketname
   lambda_config = {
     typedb_search_query_image_ver = var.typedb_search_query_image_ver
   }
@@ -200,4 +201,3 @@ data "null_data_source" "downloaded_package" {
     filename = local.downloaded
   }
 }
-

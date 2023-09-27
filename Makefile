@@ -42,7 +42,7 @@ terraform-plan: terraform-init
 
 
 terraform-apply: terraform-init
-	terraform apply -var-file "${CONFIG}.tfvars" ${AUTO_APPROVE}
+	terraform apply -var-file "${CONFIG}.tfvars" ${AUTO_APPROVE} -backend-config=global_config/preprod.conf
 
 
 terraform-destroy: terraform-init

@@ -2,7 +2,8 @@ package_url = "https://github.com/mdrxtech/beis-orp-application/archive/refs/tag
 tf_profile  = "terraform-preprod"
 environment = "preprod"
 region      = "eu-west-2"
-
+backendkey = "beis-state-preprod.tfstate"
+bucketname = "beis-state-preprod"
 html_trigger_image_ver                  = "latest"
 create_auth_challenge_image_ver         = "latest"
 define_auth_challenge_image_ver         = "latest"
@@ -95,4 +96,3 @@ scale_up_adjustment           = 1
 scale_down_comparison_operator  = "LessThanThreshold"
 scale_down_interval_lower_bound = 0
 scale_down_adjustment           = -1
-

@@ -1,5 +1,5 @@
 data "aws_route53_zone" "beis" {
-name         = "${local.environment}.open-regulation.beis.gov.uk."
+name         = "preprod.open-regulation.beis.gov.uk."
 private_zone = false
 }
 

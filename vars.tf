@@ -10,6 +10,13 @@ variable "environment" {
   type = string
 }
 
+variable "backendkey" {
+  type = string
+}
+variable "bucketname" {
+  type = string
+}
+
 variable "html_trigger_image_ver" {
   type = string
 }
